@@ -12,5 +12,15 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: download dbus repo
-      run: wget http://dbus.freedesktop.org/releases/dbus/dbus-1.9.0.tar.gz
+      run: |
+          mkdir _dbus && cd _dbus
+          wget http://dbus.freedesktop.org/releases/dbus/dbus-1.9.0.tar.gz
+          tar -xzf dbus-1.9.0.tar.gz
+          cd dbus-1.9.0
+          #patch -p1 < </path/to/CommonAPI-D-Bus/src/dbus-patches/patch-names>.patch 
+          #./configure --prefix=
+          #make -C dbus 
+          #make -C dbus install
+          #make install-pkgconfigDATA
+          
 
