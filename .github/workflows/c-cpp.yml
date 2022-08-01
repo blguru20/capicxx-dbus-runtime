@@ -13,5 +13,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: configure
+    - name: download dbus repo
+    - run: wget http://dbus.freedesktop.org/releases/dbus/dbus-1.9.0.tar.gz
 
