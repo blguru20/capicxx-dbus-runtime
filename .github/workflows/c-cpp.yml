@@ -27,12 +27,14 @@ jobs:
           echo "list all dbus libs built now : " && ls $PWD/_libs/lib
   download-dependencies: 
     runs-on: ubuntu-latest
-    steps: 
-    - name: 'download capi core lib'
-      uses: actions/download-artifact@v1
+    steps:
+    
+    - name: Download artifact from build
+    - uses: actions/checkout@master
       with:
-        name: 'libCommonAPI.so.3.2.0'
-        path: _libs
+        repo: https://github.com/blguru20/capicxx-core-runtime
+        artifact_name: my-artifact   
+        wait_seconds: 60
            
           
 
