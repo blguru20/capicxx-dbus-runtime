@@ -24,5 +24,6 @@ jobs:
           make -C dbus 
           make -C dbus install
           make install-pkgconfigDATA
+          echo "list all dbus libs built now : " && $PWD/_libs
           
 
