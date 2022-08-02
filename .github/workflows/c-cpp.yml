@@ -30,7 +30,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
         with:
-         repository: https://github.com/blguru20/capicxx-core-runtime
+         repository: blguru20/capicxx-core-runtime
          artifact_name: libCommonAPI.so.3.2.0
            
           
