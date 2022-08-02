@@ -33,7 +33,7 @@ jobs:
     - uses: actions/checkout@master
       with:
         repo: https://github.com/blguru20/capicxx-core-runtime
-        artifact_name: my-artifact   
+        artifact_name: libCommonAPI.so.3.2.0
         wait_seconds: 60
            
           
