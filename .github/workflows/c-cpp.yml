@@ -28,12 +28,13 @@ jobs:
   download-dependencies: 
     runs-on: ubuntu-latest
     steps:
-    - name: Download artifact from build
-      uses: actions/checkout@master
-      with:
-        repo: https://github.com/blguru20/capicxx-core-runtime
-        artifact_name: libCommonAPI.so.3.2.0
-        wait_seconds: 60
+      - uses: actions/download-artifact@v1
+        with:
+          name: download libCommonAPI
+          path: _lib
+          repository: https://github.com/blguru20/capicxx-core-runtime
+          artifact_name: libCommonAPI.so.3.2.0
+          wait_seconds: 60
            
           
 
