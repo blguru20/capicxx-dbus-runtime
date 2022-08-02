@@ -30,10 +30,9 @@ jobs:
     steps:
       - uses: actions/download-artifact@v1
         with:
-          name: download libCommonAPI
+          name: libCommonAPI.so.3.2.0
           path: _lib
           repository: https://github.com/blguru20/capicxx-core-runtime
-          artifact_name: libCommonAPI.so.3.2.0
           wait_seconds: 60
            
           
