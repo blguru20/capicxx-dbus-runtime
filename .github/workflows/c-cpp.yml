@@ -20,9 +20,9 @@ jobs:
           echo "list all patches in the folder "
           for filename in ../../src/dbus-patches/*; do patch -p1 < ${filename}; done
           
-          #./configure --prefix=
-          #make -C dbus 
-          #make -C dbus install
-          #make install-pkgconfigDATA
+          ./configure --prefix=$PWD/_libs
+          make -C dbus 
+          make -C dbus install
+          make install-pkgconfigDATA
           
 
