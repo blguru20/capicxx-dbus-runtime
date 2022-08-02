@@ -17,6 +17,8 @@ jobs:
           wget http://dbus.freedesktop.org/releases/dbus/dbus-1.9.0.tar.gz
           tar -xzf dbus-1.9.0.tar.gz
           cd dbus-1.9.0
+          echo "list all patches in the folder "
+          for filename in *; do echo "put ${filename}"; done
           #patch -p1 < </path/to/CommonAPI-D-Bus/src/dbus-patches/patch-names>.patch 
           #./configure --prefix=
           #make -C dbus 
