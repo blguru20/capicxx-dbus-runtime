@@ -28,8 +28,11 @@ jobs:
   download-dependencies: 
     runs-on: ubuntu-latest
     steps: 
-    - name: download capi core lib
-      run: | 
+    - name: 'download capi core lib'
+      uses: actions/download-artifact@v1
+      with:
+        name: 'libCommonAPI.so.3.2.0'
+        path: _libs
            
           
 
