@@ -50,4 +50,5 @@ jobs:
         sudo apt install clang-format
         result= git clang-format HEAD~1 HEAD --diff  --style=Google
         echo $result 
+        [ "$result" != "no modified files to format" ] && echo "There exists one or more formating errors, run clang-format and commit again" && exit 1
 
