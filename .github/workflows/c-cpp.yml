@@ -33,5 +33,12 @@ jobs:
          repository: blguru20/capicxx-core-runtime
          artifact_name: libCommonAPI.so.3.2.0
            
-          
+  run-clang-format:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: rin clang format for git diff 
+      run: | 
+        sudo apt install clang-format
+        git clang-format --diff  --style=file 
 
