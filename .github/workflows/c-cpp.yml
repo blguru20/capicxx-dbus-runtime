@@ -32,13 +32,18 @@ jobs:
         with:
          repository: blguru20/capicxx-core-runtime
          artifact_name: libCommonAPI.so.3.2.0
-           
+       
   run-clang-format:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
     - name: run clang format for git diff 
       run: | 
+        apt-get install -y git
+        git --version
+        echo "Path is ... $PATH"
+        PATH=$PATH:$(which git)
+        echo "Path is ... $PATH"
         sudo apt install clang-format
         git clang-format HEAD~1 HEAD --diff  --style=file 
 
