@@ -45,5 +45,6 @@ jobs:
         PATH=$PATH:$(which git)
         echo "Path is ... $PATH"
         sudo apt install clang-format
+        cd $github_workspace
         git clang-format HEAD^ HEAD --diff  --style=file 
 
