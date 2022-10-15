@@ -48,6 +48,5 @@ jobs:
         PATH=$PATH:$(which git)
         echo "Path is ... $PATH"
         sudo apt install clang-format
-        git commit --allow-empty -n -m "Initial commit."
         git clang-format HEAD~1 HEAD --diff  --style=file 
 
