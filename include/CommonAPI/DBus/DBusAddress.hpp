@@ -20,10 +20,7 @@ namespace DBus {
 
 class DBusAddress {
 public:
-    COMMONAPI_EXPORT DBusAddress(const std::string &_service = "",
-                const std::string &_objectPath = "",
-                const std::string &_interface = "");
-    COMMONAPI_EXPORT DBusAddress(const DBusAddress &_source);
+    COMMONAPI_EXPORT DBusAddress(const std::string &_service = "",const std::string &_objectPath = "",const std::string &_interface = "");   COMMONAPI_EXPORT DBusAddress(const DBusAddress &_source);
     COMMONAPI_EXPORT virtual ~DBusAddress();
 
     COMMONAPI_EXPORT DBusAddress &operator=(const DBusAddress &_other);
