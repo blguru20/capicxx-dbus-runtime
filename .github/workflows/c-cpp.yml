@@ -37,8 +37,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: rin clang format for git diff 
+    - name: run clang format for git diff 
       run: | 
         sudo apt install clang-format
-        git clang-format --diff  --style=file 
+        git clang-format HEAD~1 HEAD --diff  --style=file 
 
